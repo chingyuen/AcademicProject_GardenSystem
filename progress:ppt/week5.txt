@@ -1,0 +1,52 @@
+Team Project Progress Report
+Ching Yuen Ng/ Brian Rak
+Week 5
+
+Summary of Progress:
+This week we have set up the plant, the water flow for our project. 
+We also enchanced our LCD application.  To conserve power, we implemented
+stand by mode, which stops all clocks. We still not have the 
+rechargeable battery at this point so there is no way we can 
+attach the solar panel to our board. We will power our board by using 
+the normal DC.
+
+The project is essentially complete.  One thing that would be nice for the
+future is to implement the reading of packets from the indoor to the
+outdoor.  That way we could perform data analytics on the history of data
+to better track the status our our plants over a longer period of time.
+
+
+Weekly progress:
+-Enhance the stand by mode and scale as appropriate
+-send the time from outside stm to inside stm board
+-set up the plant and tubing
+-Enchant LCD graphic
+-get the LSI working on the inside stm
+-able to set the time by using the data from another board
+-set up the plant and tubing
+
+
+Challenges:
+There was a bug when we first set the time by using the data from the 
+other board. Since it will keep sending the time to my board, if I 
+keep setting it then it will crash at some point. 
+To solve this problem, I will only set the time to my LSI once.
+
+We figured out that the LSE calendar actually has a corrupt register.  The
+regiter for the date is not accurate past 0xF.  As a result, it starts
+rolling back dates beyond 0xF causing an incorrect display on the LCD.
+
+We had a problem initially figuring out the length of the delay for the 
+standby mode.  I figured out that I was using the wrong configuration for
+the clock.  I still couldn't figure out how to use the correct pre-scaler
+values for the other configurations.  It ended up working however just by
+using the configuration and the wakeup timer.
+
+Finally, getting the tubing to put water into the correct spot was
+challenging.  We tried poking holes and taping the tube but that was
+awful so we eventually got splitters and stuck them in the line.  This
+helped to put water where we wanted them without restricting the hose.
+Also, the motor was terrible until Ching figured out that the orientation
+for drawing water was supposed to be on its side.
+
+

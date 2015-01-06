@@ -1,0 +1,32 @@
+Team Project Progress Report
+Ching Yuen Ng/ Brian Rak
+Week 2
+
+Summary of Progress:
+
+This week we got nordic communicating between two boards. Sending moisture data
+from outside stm to inner stm. We didn't get the nordic working at first becuase we missed the schedule.h.
+Once we added it, the nordics are working perfectly. Also, we have to switch the
+nordicbase and nordic for the boards becuase the board with LCD has been using
+the same GPIO ports. 
+We also had trouble converting integer to the char array to send, since the nordics only support sending char[32] data.  Once we figured out how to serialize the sending of integers, we were able to read sensor data from both stms.  We also incorporated the systick to periodically read the irq pin to see if our stm read a packet.
+
+
+Weekly progress: 
+- fixing code for nordic
+- do the converting in outside stm board
+- fixing code for nordic
+- do the converting in inner stm board when receiving data.
+- implement interrupt driven IO for nordic.
+
+
+Challenges:
+It is confusing to see how nordic working seperatly in two boards, you have to 
+becareful for the status on both of them. Casting and converting the data into 
+a char buffer took us a while. But finally we got it working by sending the moisture data to the other one. 
+It was really challenging getting the nordics working.  We did not know we needed the schedule included to make the nordics work.  The file didn't seem to have anything in it other than a counter that didn't seem to refer to anything.  We were stuck on that for a while.  Also, organizing the code into 2 stms was challenging from a logistical standpoint.  After we got that working, we had some challenges in actually sending the data, since wanted to send ints but the payload was of type char *.  We eventually got that working though, and are ready to move on to low power modes and managing the solar.
+
+Planned work for following week:
+- Get pump motor working and set up solar system
+- Get Low Power mode working
+- Gather materials for pump circuit

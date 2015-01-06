@@ -1,0 +1,51 @@
+Team Project Progress Report
+Ching Yuen Ng/ Brian Rak
+Week 3
+
+Summary of Progress:
+
+This week we have the LCD graphic done, it is pretty closed to what we want, but need to optimize it. Now we are 
+recieving the data from the other board and update our LCD graphic constantly depending on the period that we have set,
+such as every 15 seconds or every minute.
+Also, we have set up the low power mode so that the board which is powered by solar will be saving power as much as possible.
+But we are not able to wake the board up once it got into the sleep mode. We need more work on this for the next week.
+This week we got a lot of work done for the LCD. It is basically done for the graphic, might need to change a few things depending how 
+the things go inthe future.
+
+
+Weekly progress:
+- created application abstraction logic for the outside stm.  This code
+  modularizes the code so that it is easy to design and redesign overall
+  application logic
+- created most of the rtc low power mode init functions.  I also spent a lot
+  of time testing the application.
+- debugged nordic
+- created application for LCD graphic.
+- set up different functions to update the status of pump, moisture, battery.
+
+
+Challenges:
+There is a few things that got me stuck for a while. the drawing lines between each dot on the graph is kind of hard, because the distance
+of each dot is different. I ended up doing a calculation for their ratio so that the lines could be drawn properly.
+Another thing is to the way we send and revceive the data by using nordic. We have to know the way we pack the buffer other wise the data will be corrupted.
+
+I had a lot of trouble debugging the rtc, which I spent most of the time on.
+We could get into the low power mode, but we could not start the WAKEUP timer
+on an interrupt or an event in order to get the board out of low power mode.
+We also adjusted our goal to get into STANDBY mode, but it seemed to interfere
+with the USBUART and downloading code to the board.
+
+We also had problems with the nordic for a bit.  This lab, we did a major
+refactor of the driver code to get data.  As a result, we had issues with the
+nordic code.  The bug ended up being in our print function though and not the
+actual code that drives the sensor.
+
+
+Next week:
+- get RTC / WKUP timer working
+- get motor working
+- get solar device working
+- get schematic designed
+- set up different functions to update the status of pump, moisture, battery.
+
+

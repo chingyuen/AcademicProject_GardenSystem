@@ -1,0 +1,57 @@
+Team Project Progress Report
+Ching Yuen Ng/ Brian Rak
+Week 4
+
+Summary of Progress:
+
+This week we got the pump working, the lower power mode working, and we were
+able to detect the PWM signal for the current on the board.  We plan to use
+the PWM to detect the battery usage to give us an estimate if the board is
+charging or running out of power.
+The application is also nicely modularized and we can test the it very quickly
+now.  It should be fairly straightforward to finish it up.  We need to test
+everything significantly but we should be all set.
+
+
+Weekly progress:
+- Got the Sleep Mode working (tenatively)
+- Modularized the Application for the outside STM
+-have the pump motor working, able to set or reset a bit to turn on/off the motor
+-set up power estimate files, getting signals but need more work.
+
+
+Challenges:
+- It was really challenging working on the Sleep Mode.  I didn't really know
+  what I was doing for the most part, but after a lot of study I began to
+  partially understand what I was doing.  The part I was stuck on this week
+  mostly revolved around the NVIC interrupts.  I did not know the interrupt
+  was firing, but apparently it was working this whole time, but it was not
+  being reset.  As soon as we reset the interrupt, it was able to come out of
+  sleep mode and go back in at regular intervals.  There still appears to be
+  some crashing over sustained periods, but the board works and it is
+  glorious.
+
+- It is really confusing when first setting up the wires for the motor, because 
+  the motor driver is able to do many things depending how you wire it up and 
+  setting the bits. Such as make the motor running forward or backward, free wheeling or in sleep mode.
+
+- For the power estimate, we need to use A2D to get the signals, but we have been 
+  using a A2D for the moisture sensor already, so that we have to seperate the power 
+  signal and the moisture signals by using different channels, still need to work on it.
+
+
+Planned work for following week:
+- Enhance Nordic protocol to include timestamps
+- Enhance Nordic error checking if no receiver is available so it doesn't
+  crash
+- Test and debug sleep mode
+- Test the pump and develop a scheduling routine for the pump flow
+- Set up the garden
+- modify the LCD function to display the power estimate
+- set the time for inside_stm board from receiving the info from outside_stm
+- enchant LCD dispay for final prototype
+- wire up the solar panel to the rechargerablr battery 
+- testing all the functions by taking two stms to outdoor
+- set up the garden
+
+

@@ -1,0 +1,49 @@
+Team Project Progress Report
+Ching Yuen Ng/ Brian Rak
+Week 1
+
+Summary of Progress:
+
+This week was a pretty good week for us.  Ching was carrying most of the load
+this week, since Brian was pretty busy and got ill.  Most of the problems
+revolved around hardware, as it took us some time to gather all of our
+equipment.  Once we got our STM, moisture sensor, LCD, and nordic all working
+properly, the software seemed to come fairly quickly.  LCD code was used from
+the previous lab and we were able to get access to the previous digital
+systems lab for our DAC and analog to digital converter.  
+For the moisture sensor, we are getting correct values from it. But we haven't
+got a chance to test the highest possible value (put it in water). Overall it 
+is working great, very responsive.
+We are going well as we planned and there is nothing changed about the block 
+diagram for now. We have attached the powerpoint in the folder but nothing 
+has to be changed.
+
+
+Weekly progress:
+- Went to store and bought aquaponics equipment
+- Wrote LCD code to drive the LCD
+- Wrote code to get moisture data
+- Assembled main file for indoor stm/outside stm
+- Went to store and bought aquaponics equipment
+- Set up repository/makefiles for project
+- Wrote driver file for dac/timer2/a2d
+
+
+Challenges:
+- We could not get our second STM to download code onto the board it took a very
+  long time to diagnose the problem.  We originally thought the LCD was the
+  issue, but it was actually the STM itself.
+- For buying the aquaponics stuff, it was a little difficult to get the right
+  type of equipment for the right type of plant.  For example, some plants
+  needed to be watered more frequently than other plants.  Other plants did
+  not need as much watering.  As a result, we found ourselves getting a
+  recommendation from the florist.  We will have to see if our gravel will work
+  properly with the plant and will not drain the water too quickly.
+
+
+Planned work for following week:
+- Get nordic code working
+- Get Low Power mode working
+- Gather materials for pump circuit
+- Enhance LCD application
+
